@@ -1,6 +1,7 @@
 simple deployment of Kafka in Kubernetes cluster that can be accessed from outside the Kubernetes cluster
 
 # Deploy Kafka
+Modify the ip address in deployment_kafka.yml to the host node’s ip address.
 ```
 kubectl apply -f zookeeper_deployment.yml 
 kubectl apply -f zookeeper_service.yml
