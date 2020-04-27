@@ -1,6 +1,13 @@
 simple deployment of Kafka in Kubernetes cluster that can be accessed from outside the Kubernetes cluster
 
-
+# Deploy Kafka
+```
+kubectl apply -f zookeeper_deployment.yml 
+kubectl apply -f zookeeper_service.yml
+kubectl apply -f deployment_kafka.yml
+kubectl apply -f service_external.yml
+kubectl apply -f service_local.yml
+```
 
 # Testing Method
 Execute from a host outside the Kubernet cluster  
