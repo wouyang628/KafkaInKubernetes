@@ -5,6 +5,7 @@ metadata:
   labels:
     app: zookeeper
   name: zookeeper
+  namespace: kafka
 spec:
   replicas: 1
   selector:
@@ -15,6 +16,8 @@ spec:
       labels:
         app: zookeeper
     spec:
+      #nodeSelector:
+        #kubernetes.io/hostname: vm-k8s-slave-01
       containers:
       - image: wurstmeister/zookeeper:3.4.6
         imagePullPolicy: IfNotPresent
