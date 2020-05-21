@@ -5,6 +5,7 @@ metadata:
   labels:
     app: zookeeper-service
   name: zookeeper-service
+  namespace: kafka
 spec:
   type: NodePort
   ports:
@@ -13,4 +14,3 @@ spec:
     targetPort: 2181
   selector:
     app: zookeeper
-
